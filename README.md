@@ -6,7 +6,15 @@ Repository de documents pour les TD de monnaie numérique
 
 
 # 1. TD2
-La génération de clés a été mise en place avec une seed = 0 (fichier keys.py)
+La génération de clés a été mise en place avec une seed = 0 (fichier keys.py), le processus de création est le suivant :
+### 1.1. Génération d'une clé privée aléatoire (avec un random), on y ajoute le bon préfixe pour le testnet ('0xef') ou le mainnet ('0x80')
+### 1.2. Calcul de la liste de mot à partir de cette clé privée
+### 1.3. Calcul de la clé publique et de l'adresse correspondante
+Bitcoin utilise spec256k1 pour obtenir la clé publique. 
+Pour obtenir l'adresse, on hash deux fois la clé publique, d'abord avec SHA256 puis RIPEMD360, puis on y ajoute le préfixe du réseau souhaité (mainnet ou testnet) et un suffixe correspondant au checksum de cette adresse. Enfin, on encode en base58 pour obtenir l'adresse.
+### 1.4. Calcul du WIF à partir de la clé privée
+Correspond à un double hash 256 de la clé privée, auquel on ajoute le préfixe du réseau souhaité puis un suffixe correspondant au checksum de la clé. Enfin on encode en base58 pour obtenir la clé WIF
+
 ```sh
 get_keys_w_seed(0)
 ```
