@@ -15,6 +15,7 @@ Pour obtenir l'adresse, on hash deux fois la clé publique, d'abord avec SHA256 
 ### 1.4. Calcul du WIF à partir de la clé privée
 Correspond à un double hash 256 de la clé privée, auquel on ajoute le préfixe du réseau souhaité puis un suffixe correspondant au checksum de la clé. Enfin on encode en base58 pour obtenir la clé WIF
 
+### 1.5. Résultat
 ```sh
 get_keys_w_seed(0)
 ```
