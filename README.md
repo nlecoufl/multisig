@@ -1,4 +1,4 @@
-# Multsig2of3
+# Monnaie Numérique
 
 Repository de documents pour les TD de monnaie numérique
 * **TD2**: keys.py
