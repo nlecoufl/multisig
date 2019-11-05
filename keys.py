@@ -60,6 +60,6 @@ def get_keys_w_seed(seed):
   publ_addr = get_publ_address(publ_key)
   return priv_key, publ_key, WIF, publ_addr
 
-print(get_keys_w_seed)
+print(get_keys_w_seed(0))
 # You can verify here by pasting WIF: https://coinb.in/#verify
 
