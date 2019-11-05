@@ -2,7 +2,7 @@
 # Send coins to a 2-of-3 multisig, then spend them.
 #
 # For this example, I'm using these three keypairs (public/private)
-# 02e8c3591920ea995332889ff3b66df83b5a26fb9cd6ab10d78e54909e2892ff34 / p2wpkh:cPVXpU3axwSWptbppzkVKL1Ep8jLqrcxSsiNnqyDfkwu9z9xUArK ()
+# 02e8c3591920ea995332889ff3b66df83b5a26fb9cd6ab10d78e54909e2892ff34 / p2wpkh:cPVXpU3axwSWptbppzkVKL1Ep8jLqrcxSsiNnqyDfkwu9z9xUArK (the UTXO is on the public address of this keypair)
 # 02c522ba9d5063c526c46c5750f22c96d0593c40537e19dc3ffd41a98914f39f07 / p2wpkh:cStuGJkCJkjUX4naKB5E8MWJNFVgCLLXDFuns7rbCN16KrY9iNdE
 # 03f587bc04d50edd8a4c1e99f9cdb503e0e55e354b97d7ed9f79017f0c42589d94 / p2wpkh:cNMT9vs77NyDt1LDqqSeYnpZ9kbc1TQFfDhsztcqYFfwqNMka1B8
 
