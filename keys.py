@@ -3,6 +3,7 @@ import random
 import qrcode
 import struct
 from hexdump import hexdump
+from mnemonic import mnemonic
 
 # Generating Private key, Public keys, WIF and Public address
 
@@ -54,12 +55,15 @@ def get_publ_address(publ_key):
 # https://en.bitcoin.it/wiki/Wallet_import_format
 def get_keys_w_seed(seed):
   priv_key = make_private_key(seed)
+  mnemo = mnemonic.Mnemonic('french')
+  words = mnemo.to_mnemonic(priv_key)
   full_key = get_full_key(priv_key)
   WIF = base58_w_checksum(full_key).decode()
   publ_key = priv_to_publ_key(priv_key)
   publ_addr = get_publ_address(publ_key)
-  return priv_key, publ_key, WIF, publ_addr
+  return priv_key, words, publ_key, WIF, publ_addr
+
+# You can verify here by pasting WIF: https://coinb.in/#verify
 
 print(get_keys_w_seed(0))
-# You can verify here by pasting WIF: https://coinb.in/#verify
 
