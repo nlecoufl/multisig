@@ -1,11 +1,4 @@
-# Monnaie Numérique
-
-Repository de documents pour les TD de monnaie numérique
-  * **TD2**: keys.py
-  * **TD3**: multisig.sh
-
-
-# 1. TD2
+# 1. Génération de clé
 La génération de clés a été mise en place avec une seed = 0 (fichier keys.py), le processus de création est le suivant :
 ### 1.1. Génération d'une clé privée aléatoire (avec un random), on y ajoute le bon préfixe pour le testnet ('0xef') ou le mainnet ('0x80')
 ### 1.2. Calcul de la liste de mot à partir de cette clé privée
@@ -28,11 +21,7 @@ WIF : 9363iyQYqSejRUQgFTdjWzahrDJYFk2g3pTbc49LL6y1ZGoy3bi
 Public Address : mvPuJFmdE3iv8xJgB9cwDzogsGV369Jz63
 ```
 
-Pour le TD3, j'ai importé la liste de mot pour créer un wallet Electrum sur le testnet bitcoin.
-
-# 2. TD3
-J'ai voulu faire le TD en utilisant l'api bitcoin-cli, mais lors de l'envoi de la transaction alimentant le wallet multisig j'avais toujours une erreur "missing input". 
-Je pense que cela est dû au fait que l'UTXO utilisé dans cette transaction n'est pas sur le wallet du client bitcoin-cli.
+# 2. Transaction
 
 ### 2.1. Création d'une adresse multisig'
 ```sh
